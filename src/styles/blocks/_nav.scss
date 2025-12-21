@@ -1,0 +1,64 @@
+@use 'variables';
+
+.nav {
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+
+  &__list {
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    & > :nth-child(n + 2) {
+      margin-left: 20px;
+    }
+  }
+
+  &__item {
+    list-style-type: none;
+  }
+
+  &__link {
+    line-height: 59.5px;
+    display: flex;
+    align-items: center;
+    color: variables.$color-nav-text;
+    font-family:
+      Roboto,
+      system-ui,
+      -apple-system,
+      'Segoe UI',
+      Arial,
+      sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    transition-duration: 0.3s;
+
+    &--is-active::after {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 4px;
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+      bottom: 0;
+      background-color: variables.$color-nav;
+      border-radius: 8px;
+    }
+
+    &[class*='is-active'] {
+      color: variables.$color-nav;
+    }
+
+    &:hover {
+      color: variables.$color-nav;
+    }
+  }
+}
