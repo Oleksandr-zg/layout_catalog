@@ -24,7 +24,7 @@
     line-height: 59.5px;
     display: flex;
     align-items: center;
-    color: variables.$color-nav-text;
+    color: variables.$color-text-title;
     font-family:
       Roboto,
       system-ui,
@@ -40,7 +40,7 @@
     position: relative;
     transition-duration: 0.3s;
 
-    &--is-active::after {
+    &.is-active::after {
       content: '';
       display: block;
       width: 36px;
@@ -49,16 +49,16 @@
       transform: translateX(-50%);
       left: 50%;
       bottom: 0;
-      background-color: variables.$color-nav;
+      background-color: variables.$color-accent;
       border-radius: 8px;
     }
 
-    &[class*='is-active'] {
-      color: variables.$color-nav;
+    &.is-active {
+      color: variables.$color-accent;
     }
 
     &:hover {
-      color: variables.$color-nav;
+      color: variables.$color-accent;
     }
   }
 }

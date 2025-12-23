@@ -1,11 +1,13 @@
+@use 'variables';
+
 .stars {
   display: flex;
 
   &__star {
-    width: 16px;
-    height: 16px;
+    width: variables.$star-size;
+    height: variables.$star-size;
     background-repeat: no-repeat;
-    background-size: 16px;
+    background-size: variables.$star-size;
   }
 
   &__star::before {
@@ -13,7 +15,7 @@
   }
 
   &__star:not(:last-child) {
-    margin-right: 4px;
+    margin-right: variables.$star-margin-right;
   }
 
   &--0 .stars__star:nth-child(n + 1)::before {

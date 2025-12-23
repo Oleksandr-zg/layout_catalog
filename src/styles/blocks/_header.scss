@@ -1,10 +1,13 @@
+@use 'variables';
+
 .header {
   grid-area: header;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding-right: variables.$container-padding-x;
+  padding-left: variables.$container-padding-x;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 
   &__logo-link {
     padding: 10px 0;
