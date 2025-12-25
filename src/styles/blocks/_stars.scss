@@ -4,10 +4,10 @@
   display: flex;
 
   &__star {
-    width: variables.$star-size;
-    height: variables.$star-size;
+    width: variables.$general-size;
+    height: variables.$general-size;
     background-repeat: no-repeat;
-    background-size: variables.$star-size;
+    background-size: variables.$general-size;
   }
 
   &__star::before {
@@ -15,7 +15,7 @@
   }
 
   &__star:not(:last-child) {
-    margin-right: variables.$star-margin-right;
+    margin-right: variables.$margin-right-4;
   }
 
   &--0 .stars__star:nth-child(n + 1)::before {

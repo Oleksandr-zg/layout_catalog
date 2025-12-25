@@ -5,12 +5,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: variables.$container-padding-x;
-  padding-left: variables.$container-padding-x;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  padding-right: variables.$padding-space-5;
+  padding-left: variables.$padding-space-5;
+  box-shadow: variables.$box-shadow;
 
   &__logo-link {
-    padding: 10px 0;
+    padding: variables.$size-spase-10 0;
   }
 
   &__img-logo {
